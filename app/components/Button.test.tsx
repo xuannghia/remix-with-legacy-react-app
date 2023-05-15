@@ -1,5 +1,3 @@
-import "global-jsdom/register";
-
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import test from "ava";
 import { useState } from "react";
