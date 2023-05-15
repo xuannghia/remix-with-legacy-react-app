@@ -8,7 +8,9 @@
     "typecheck": "tsc",
     "unimported": "unimported",
     "lint": "eslint --max-warnings 0 . && pnpm unimported",
-    "lint:fix": "eslint --fix --max-warnings 0 ."
+    "lint:fix": "eslint --fix --max-warnings 0 .",
+    "test": "ava",
+    "test:e2e": "echo 'No e2e tests yet.'"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -30,8 +32,10 @@
     "@remix-run/dev": "^1.16.0",
     "@remix-run/eslint-config": "^1.16.0",
     "@remix-run/serve": "^1.16.0",
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
+    "ava": "^5.2.0",
     "eslint": "^8.38.0",
     "eslint-config-async": "^2.0.1",
     "eslint-config-prettier": "^8.8.0",
@@ -39,7 +43,10 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sonarjs": "^0.19.0",
+    "global-jsdom": "^9.0.1",
+    "jsdom": "^22.0.0",
     "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "unimported": "^1.28.0"
   },
@@ -57,5 +64,11 @@
   },
   "engines": {
     "node": ">=14"
+  },
+  "ava": {
+    "extensions": ["ts", "tsx", "js", "jsx"],
+    "nodeArguments": [
+      "--loader=ts-node/esm"
+    ]
   }
 }
