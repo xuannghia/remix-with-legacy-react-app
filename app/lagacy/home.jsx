@@ -9,7 +9,9 @@ export default function HomePage() {
   return (
     <Box px={2}>
       <h1>Home page</h1>
-      <Box mb={2}>Count: {count}</Box>
+      <Box mb={2}>
+        Count: <span data-testid="counter">{count}</span>
+      </Box>
       <Button variant="contained" onClick={increase}>
         Increase
       </Button>

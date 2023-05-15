@@ -11,7 +11,9 @@ export default function Index() {
   return (
     <Box p={2}>
       <h1>This is Remix page</h1>
-      <Box mb={2}>Count: {count}</Box>
+      <Box mb={2}>
+        Count: <span data-testid="counter">{count}</span>
+      </Box>
       <Button variant="contained" color="secondary" onClick={increase}>
         Increase
       </Button>

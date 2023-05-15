@@ -11,7 +11,7 @@
     "lint:fix": "eslint --fix --max-warnings 0 .",
     "test:ava": "ava",
     "test:vitest": "vitest --run",
-    "test:e2e": "echo 'No e2e tests yet.'"
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -30,6 +30,7 @@
     "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.33.0",
     "@remix-run/dev": "^1.16.0",
     "@remix-run/eslint-config": "^1.16.0",
     "@remix-run/serve": "^1.16.0",
