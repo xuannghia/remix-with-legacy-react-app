@@ -9,5 +9,5 @@ export default function BlogPage() {
       <h1>Blog Page</h1>
       <p>Slug: {params.slug}</p>
     </Box>
-  )
+  );
 }

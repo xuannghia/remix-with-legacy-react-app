@@ -5,7 +5,10 @@
     "build": "remix build",
     "dev": "remix dev",
     "start": "cross-env NODE_ENV=production netlify dev",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "unimported": "unimported",
+    "lint": "eslint --max-warnings 0 . && pnpm unimported",
+    "lint:fix": "eslint --fix --max-warnings 0 ."
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -30,7 +33,27 @@
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "eslint": "^8.38.0",
-    "typescript": "^5.0.4"
+    "eslint-config-async": "^2.0.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4",
+    "unimported": "^1.28.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "engines": {
     "node": ">=14"

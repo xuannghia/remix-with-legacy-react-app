@@ -5,5 +5,5 @@ export default function AboutPage() {
     <Box px={2}>
       <h1>About page</h1>
     </Box>
-  )
+  );
 }

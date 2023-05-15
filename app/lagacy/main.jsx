@@ -1,13 +1,13 @@
+import "./index.css";
+
+import { Link as RMLink } from "@remix-run/react";
 import { Route, Routes } from "react-router";
 import { BrowserRouter, Link } from "react-router-dom";
-import { Link as RMLink } from "@remix-run/react";
 
-import HomePage from "./home";
+import NotFoundPage from "./404";
 import AboutPage from "./about";
 import BlogPage from "./blog";
-import NotFoundPage from "./404";
-
-import './index.css'
+import HomePage from "./home";
 
 export default function Main() {
   return (
@@ -46,5 +46,5 @@ export default function Main() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }

@@ -1,0 +1,16 @@
+{
+  "entry": [
+    "./server.ts",
+    "./app/entry.client.tsx",
+    "./app/entry.server.tsx",
+    "./app/root.tsx",
+    "./app/routes/**/*.{ts,tsx}",
+    "./app/legacy/main.jsx"
+  ],
+  "ignoreUnimported": [
+    "remix.config.js"
+  ],
+  "ignoreUnused": [
+    "cross-env"
+  ]
+}
