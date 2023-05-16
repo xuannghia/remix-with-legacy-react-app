@@ -1,9 +1,9 @@
-import type { PropsWithChildren } from "react";
+import type {PropsWithChildren} from 'react';
 
-interface ButtonProps extends PropsWithChildren {
-  onClick?: () => void;
-}
+type ButtonProps = {
+	onClick?: () => void;
+} & PropsWithChildren;
 
-export default function Button({ children, onClick }: ButtonProps) {
-  return <button onClick={onClick}>{children}</button>;
+export default function Button({children, onClick}: ButtonProps) {
+	return <button type="button" onClick={onClick}>{children}</button>;
 }

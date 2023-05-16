@@ -8,7 +8,11 @@
     "./app/legacy/main.jsx"
   ],
   "ignoreUnimported": [
-    "remix.config.js"
+    "remix.config.js",
+    "vitest.config.ts",
+    "playwright.config.ts",
+    "public/**/*",
+    "app/**/*.{test,vitest}.{js,jsx,ts,tsx}"
   ],
   "ignoreUnused": [
     "cross-env"

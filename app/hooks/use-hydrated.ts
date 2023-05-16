@@ -1,6 +1,6 @@
 // Ref: https://github.com/sergiodxa/remix-utils/blob/main/src/react/use-hydrated.ts
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from 'react';
 
 let hydrating = true;
 
@@ -22,12 +22,12 @@ let hydrating = true;
  * ```
  */
 export function useHydrated() {
-  let [hydrated, setHydrated] = useState(() => !hydrating);
+	const [hydrated, setHydrated] = useState(() => !hydrating);
 
-  useEffect(function hydrate() {
-    hydrating = false;
-    setHydrated(true);
-  }, []);
+	useEffect(() => {
+		hydrating = false;
+		setHydrated(true);
+	}, []);
 
-  return hydrated;
+	return hydrated;
 }
