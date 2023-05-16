@@ -27,17 +27,6 @@ module.exports = {
 	},
 	overrides: [
 		{
-			rules: {
-				'@typescript-eslint/naming-convention': [
-					'error',
-					{
-						selector: 'variable',
-						format: ['strictCamelCase', 'UPPER_CASE'],
-					},
-				],
-			},
-		},
-		{
 			files: ['*.jsx'],
 			rules: {
 				'@typescript-eslint/naming-convention': [
