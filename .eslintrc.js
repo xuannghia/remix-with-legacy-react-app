@@ -13,7 +13,7 @@ module.exports = {
 	parserOptions: {
 		project: ['./tsconfig.json'],
 	},
-	ignorePatterns: ['node_modules/', 'dist/', 'build/'],
+	ignorePatterns: ['node_modules/', 'dist/', 'build/', 'public/', 'app/legacy/'],
 	rules: {
 		'no-underscore-dangle': ['error', {allow: ['_id', '__v']}],
 		'jsx-quotes': ['error', 'prefer-double'],
@@ -23,20 +23,15 @@ module.exports = {
 		'simple-import-sort/imports': 'error',
 		'simple-import-sort/exports': 'error',
 		// Unicorn
-		'unicorn/prevent-abbreviations': 'off',
-	},
-	overrides: [
-		{
-			files: ['*.jsx'],
-			rules: {
-				'@typescript-eslint/naming-convention': [
-					'error',
-					{
-						selector: 'variable',
-						format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
-					},
-				],
+		'unicorn/prevent-abbreviations': [
+			'error',
+			{
+				replacements: {
+					env: false,
+					props: false,
+					params: false,
+				},
 			},
-		},
-	],
+		],
+	},
 };

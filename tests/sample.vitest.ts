@@ -1,9 +1,9 @@
 import {describe, expect, test} from 'vitest';
 
-const fn = () => 'foo';
+const sample = () => 'foo';
 
 describe('test', () => {
-	test('fn() returns foo', () => {
-		expect(fn()).toBe('foo');
+	test('sample() returns foo', () => {
+		expect(sample()).toBe('foo');
 	});
 });
