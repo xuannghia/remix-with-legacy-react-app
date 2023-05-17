@@ -4,9 +4,7 @@
     ".eslintrc.js",
     "remix.config.js",
     "**/*.ts",
-    "**/*.tsx", 
-    "**/*.js", 
-    "**/*.jsx"
+    "**/*.tsx",
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
