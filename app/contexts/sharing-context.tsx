@@ -9,7 +9,7 @@ export const SharingContext = createContext({
 
 export function SharingContextProvider({children}: PropsWithChildren) {
 	const [count, setCount] = useState(0);
-	const increase = useCallback(() => () => {
+	const increase = useCallback(() => {
 		setCount(state => state + 1);
 	}, []);
 
