@@ -1,7 +1,9 @@
-import test from 'ava';
+import {describe, expect, test} from 'vitest';
 
 const sample = () => 'foo';
 
-test('sample() returns foo', t => {
-	t.is(sample(), 'foo');
+describe('test', () => {
+	test('sample() returns foo', () => {
+		expect(sample()).toBe('foo');
+	});
 });
